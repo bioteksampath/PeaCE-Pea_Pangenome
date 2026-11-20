@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper and this repository."
+title: "PeaCE-Pea_Pangenome: analysis code for the 85-genome pea (Pisum) pangenome"
+type: software
+version: "1.0.0"
+date-released: "2026-11-09"
+license: MIT
+repository-code: "https://github.com/bioteksampath/PeaCE-Pea_Pangenome"
+authors:
+  - family-names: Perumal
+    given-names: Sampath
+    affiliation: "National Research Council Canada, Saskatoon, Canada"
+keywords:
+  - pea
+  - Pisum
+  - pangenome
+  - structural variation
+  - transposon insertion polymorphism
+  - LTR retrotransposon
+  - resistance gene analogue
+  - powdery mildew
+preferred-citation:
+  type: article
+  title: "Pea pangenomics connects structural variation with disease"
+  authors:
+    - family-names: Perumal
+      given-names: Sampath
+  year: 2026
+  status: in-preparation

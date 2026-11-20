@@ -1,0 +1,45 @@
+{
+  "title": "PeaCE-Pea_Pangenome: analysis code for the 85-genome pea (Pisum) pangenome",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "publication_date": "2026-11-09",
+  "description": "<p>Custom scripts for the manuscript <i>Pea pangenomics connects structural variation with disease</i>. The archive contains six modules: (1) short-read SNP calling, filtering, imputation and PCA; (2) full-length LTR retrotransposon identification (DANTE_LTR + EDTA) and insertion-age estimation; (3) pan-RGAome core/shell/cloud classification and saturation analysis; (4) structural-variant calling from PacBio HiFi reads mapped to CDC Amarillo (Sniffles2 + SVIM) and pan-SV catalogue; (5) transposon insertion polymorphism (TIP) discovery, lineage classification, LTR dating and force-calling; (6) powdery mildew RNA-seq (STAR/RSEM, DESeq2) and Er3 candidate-gene summary. See README.md for usage, inputs, outputs and the figure each script produces.</p>",
+  "creators": [
+    {
+      "name": "Perumal, Sampath",
+      "affiliation": "National Research Council Canada"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "pea",
+    "Pisum",
+    "pangenome",
+    "structural variation",
+    "transposon insertion polymorphism",
+    "LTR retrotransposon",
+    "resistance gene analogue",
+    "NLR",
+    "powdery mildew",
+    "Er3",
+    "Aphanomyces"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://www.ncbi.nlm.nih.gov/bioproject/1495898",
+      "relation": "isSupplementTo",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://github.com/Lcamdom/panTEvo",
+      "relation": "isDerivedFrom",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/sivasubramanics/PanG2P",
+      "relation": "references",
+      "resource_type": "software"
+    }
+  ]
+}

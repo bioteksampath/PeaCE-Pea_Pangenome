@@ -1,0 +1,10 @@
+name: pisum_rnaseq
+# Versions as reported in the manuscript Methods; unpinned tools were not versioned there.
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - fastqc=0.12.1
+  - cutadapt=5.1
+  - star=2.7.11b
+  - rsem=1.3.3

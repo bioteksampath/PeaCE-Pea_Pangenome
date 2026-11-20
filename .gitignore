@@ -1,0 +1,51 @@
+# data and large outputs: never commit
+*.fa
+*.fasta
+*.fna
+*.fa.gz
+*.fasta.gz
+*.fai
+*.fq
+*.fastq
+*.fq.gz
+*.fastq.gz
+*.bam
+*.bai
+*.cram
+*.crai
+*.sam
+*.bcf
+*.csi
+*.vcf
+*.vcf.gz
+*.tbi
+*.gff3
+*.gtf
+*.snf
+*.rds
+*.pdf
+*.png
+*.xlsx
+
+# run folders
+out/
+results/
+work/
+logs/
+.done/
+tmp*/
+
+# private notes (manuscript checklist, drafts)
+NOTES*.md
+*.docx
+
+# system / editors
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+.Rproj.user/
+.vscode/
+.idea/

@@ -1,0 +1,12 @@
+name: pisum_sv
+# Versions as reported in the manuscript Methods; unpinned tools were not versioned there.
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - minimap2=2.28
+  - samtools
+  - sniffles=2.6.2
+  - svim=2.0.0
+  - survivor=1.0.7
+  - bcftools

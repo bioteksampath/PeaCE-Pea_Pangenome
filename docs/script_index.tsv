@@ -1,0 +1,19 @@
+module	script	language	methods_section	figures_tables	main_inputs	main_outputs
+snp_population	snp_calling_qc.sh	Bash	SNP calling, population structure and genetic diversity	Fig. 1a	reference FASTA; sample<TAB>R1<TAB>R2	filtered + imputed VCFs per chromosome; PLINK2 eigenvec/eigenval; mapping and SNP count tables
+ltr_age	build_ltr_manifest.py	Python	Identification and classification of full-length LTR retrotransposons	—	legacy map1/map2 tables	genome_manifest.tsv
+ltr_age	ltr_age_pipeline.sh	Bash	Estimation of full-length LTR retrotransposon insertion ages	Fig. 3a; Ext. Data Fig. 2b, 2d; Supp. Fig. 3	genome manifest; DANTE_LTR GFF3; EDTA pass.list + TEsorter cls.tsv; genome FASTA	Pisum_all_LTR_age.tsv; per-genome LTR age tables; LTR_age_summary.tsv
+ltr_age	lib/make_ltr_inputs.py	Python	Estimation of full-length LTR retrotransposon insertion ages	—	DANTE master table (step 2)	<prefix>.LTR5.bed, <prefix>.LTR3.bed
+ltr_age	lib/ltr_divergence_dnateV2.py	Python	Estimation of full-length LTR retrotransposon insertion ages	Supp. Fig. 3	5' and 3' LTR FASTA	LTRpair_age.tsv (p, K2P, JC69 distances; raw_T, K2P_T, JC69_T in years)
+ltr_age	lib/edta_infer_ltr_positions.py	Python	Estimation of full-length LTR retrotransposon insertion ages	—	EDTA-unique elements (BED-like); genome FASTA	<prefix>.ltr_ends.tsv
+pan_rgaome	rga_core_shell_cloud.R	R	Construction of Pan-RGAome	Fig. 2c, 2d	MMseqs2 cluster table; RGA annotation; sample<TAB>taxon	OG summary; category x class table + chi-square; taxon sharing; PDFs
+pan_rgaome	rga_saturation.R	R	Construction of Pan-RGAome	Fig. 2b	MMseqs2 cluster table	permutation table; saturation summary; PDFs
+sv_longread	sv_calling_hifi.sh	Bash	Long-read structural variant detection	Ext. Data Fig. 5a-d	reference FASTA (CDC Amarillo); sample<TAB>HiFi reads or BAM	per-sample consensus VCF/BED; pan-SV VCF; SV counts table
+tip_discovery	tip_discovery.sh	Bash	Transposon insertion polymorphism (TIP) discovery and genotyping	Fig. 3a-e; Ext. Data Fig. 6a-f; Supp. Table 6	pan-SV VCF; TE library FASTA; (step 8) reference + sample<TAB>BAM	TIP annotation table; lineage counts; TIP VCF; sites-only VCF; force-called VCF
+tip_discovery	tip_ltr_age.py	Python	Transposon insertion polymorphism (TIP) discovery and genotyping	Fig. 3b; Ext. Data Fig. 6e	FASTA of LTR-RT TIPs	LTR_results.csv (lenLTR, K2P distance, age in Myr)
+pm_rnaseq	star_rsem.sh	Bash	Powdery mildew expression analyses	input for Fig. 4f	WL2140 genome + annotation; sample<TAB>R1<TAB>R2	RSEM genes.results; expected count and TPM matrices; STAR mapping rates
+pm_rnaseq	rnaseq_qc.R	R	RNA isolation and analysis of introgression parents and population	QC	RSEM genes.results folder	rnaseq_samples.tsv; QC tables and plots; VST matrix
+pm_rnaseq	deseq2_parents.R	R	Powdery mildew expression analyses	Er3 candidate tables	rnaseq_samples.tsv; gene/R-gene annotation	DE tables per time point; interaction results; volcano, position and heatmap plots
+pm_rnaseq	deseq2_introgression_lines.R	R	Powdery mildew expression analyses	Er3 candidate tables	rnaseq_samples.tsv	per-line and group interaction results; DE summary; VST matrix
+pm_rnaseq	er3_candidate_summary.R	R	Powdery mildew expression analyses	Supplementary candidate tables	DESeq2 *_ALL.csv from deseq2_*.R; gene/R-gene annotation	candidate tables; DE summary; LFC heatmaps; Er3_DESeq2_summary.xlsx
+pm_rnaseq	r1r7_expression_plot.R	R	Powdery mildew expression analyses	Fig. 4f	rnaseq_samples.tsv; gene_id<TAB>label for R1-R7	Fig4f PDF; per-sample and summary tables
+pm_rnaseq	rnaseq_utils.R	R	—	—	—	shared helper functions

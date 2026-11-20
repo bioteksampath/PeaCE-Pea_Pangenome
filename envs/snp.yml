@@ -1,0 +1,12 @@
+name: pisum_snp
+# Versions as reported in the manuscript Methods; unpinned tools were not versioned there.
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - cutadapt=5.1
+  - bwa=0.7.19
+  - samtools
+  - bcftools=1.22
+  - beagle=5.4
+  - plink2

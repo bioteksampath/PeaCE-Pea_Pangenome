@@ -1,0 +1,11 @@
+name: pisum_ltr_age
+# Versions as reported in the manuscript Methods; unpinned tools were not versioned there.
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python>=3.8
+  - biopython
+  - blast
+  - bedtools
+  - gawk

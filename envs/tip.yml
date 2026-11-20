@@ -1,0 +1,15 @@
+name: pisum_tip
+# Versions as reported in the manuscript Methods; unpinned tools were not versioned there.
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python>=3.8
+  - biopython
+  - blast=2.12.0
+  - tesorter=1.4.7
+  - mafft
+  - seqkit
+  - bedtools
+  - bcftools
+  - sniffles=2.7.2      # step 8 force-calling
